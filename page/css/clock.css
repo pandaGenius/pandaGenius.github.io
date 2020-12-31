@@ -17,18 +17,28 @@ span {
 .main .box .date {
    display: flex; 
    justify-content: center;
+   line-height: 1;
+   margin-bottom: 20px;
 }
 .date-md {
     font-size: 180px;
 }
+.date-m {
+    float: left;
+}
+.date-d {
+    float: left;
+}
 .date-year {
     font-size: 40px; 
-    margin-top: 165px;
+    margin-top: 138px;
+    float: left;
 }
 
 
 .main .box .time {
     display: flex;
+    line-height: 1;
 }
 .time-hm {
     font-size: 500px;
@@ -43,7 +53,7 @@ span {
 .time-s {
     width: 120px;
     font-size: 100px; 
-    margin-top: 420px;
+    margin-top: 345px;
 }
 .blink-box {
     display: inline-block;
