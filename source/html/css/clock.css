@@ -1,0 +1,58 @@
+span {
+    display: inline-block;
+}
+.main {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #000;
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.main .box .date {
+   display: flex; 
+   justify-content: center;
+}
+.date-md {
+    font-size: 180px;
+}
+.date-year {
+    font-size: 40px; 
+    margin-top: 165px;
+}
+
+
+.main .box .time {
+    display: flex;
+}
+.time-hm {
+    font-size: 500px;
+    font-weight: 500; 
+}
+.time-h {
+    float: left;
+}
+.time-m {
+    float: left;
+}
+.time-s {
+    width: 120px;
+    font-size: 100px; 
+    margin-top: 420px;
+}
+.blink-box {
+    display: inline-block;
+    float: left;
+    width: 125px;
+    height: 1px;
+    padding: 0 10px;
+}
+.blink {
+    margin-top: -40px;
+    display: block;
+}
