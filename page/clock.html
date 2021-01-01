@@ -4,27 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>⌚</title>
+    <link rel="stylesheet" href="./css/select.css">  
     <link rel="stylesheet" href="./css/clock.css">  
 </head>
 <body>
     <div id="app" class="main">
+        <div class="setting-box">
+            <div class="dropdown">
+                <div class="dropdown-content">
+                    <p v-for="item in settingData" @click="setting(item)"><span v-show="item.checked">✅</span> {{item.label}}</p>
+                </div>
+            </div>
+        </div>
         <div class="box" v-if="loaded">
             <div class="date">
-                <div class="date-md">
+                <div class="date-ymd">
+                    <span class="date-y" v-show="settingData[0].checked">{{year}}年</span>
                     <span class="date-m">{{month}}月</span>
                     <span class="date-d">{{day}}日</span>
                 </div>
-                <div class="date-year">{{year}}年</div>
             </div>
             <div class="time">
                 <div class="time-hm">
                     <span class="time-h">{{hour}}</span>
                     <span class="blink-box">
-                        <span v-show="blink" class="blink">:</span>
+                        <span v-show="blink && settingData[2].checked" class="blink">:</span>
                     </span>
                     <span class="time-m">{{minite}}</span>
                 </div>
-                <div class="time-s">{{second}}</div>
+                <div class="time-s" v-show="settingData[1].checked">{{second}}</div>
             </div>
         </div>
     </div>

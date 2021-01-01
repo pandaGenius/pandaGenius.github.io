@@ -8,12 +8,41 @@ var app = new Vue({
         hour: '',
         minite: '',
         second: '',
-        blink: true
+        blink: true,
+
+        settingData: [
+            {
+                label: '显示年份',
+                index: 1,
+                checked: false
+            },
+            {
+                label: '显示秒数',
+                index: 2,
+                checked: false
+            },
+            {
+                label: '时间闪烁',
+                index: 3,
+                checked: true
+            }
+        ]
     },
     created() {
-        this.timer();
+        this.init();
     },
     methods: {
+        init() {
+            this.timer();
+            let clcokJson = localStorage.getItem('clock-setting');
+            if (clcokJson) {
+                let clockSetting = JSON.parse(clcokJson);
+                this.settingData.map(d => {
+                    d.checked = clockSetting[d.index];
+                    
+                });
+            }
+        },
         timer() {
             const t = setTimeout(() => {
                 const time = new Date();
@@ -31,6 +60,15 @@ var app = new Vue({
         },
         checkTime(i) {
             return i < 10 ? `0${i}` : i;
+        },
+        setting(item) {
+            console.log(item);
+            item.checked = !item.checked;
+            let obj = {};
+            this.settingData.map(d => {
+                obj[d.index] = d.checked;
+            });
+            localStorage.setItem('clock-setting', JSON.stringify(obj))
         }
     }
 })
