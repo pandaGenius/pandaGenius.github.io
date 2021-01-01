@@ -20,19 +20,9 @@ span {
    line-height: 1;
    margin-bottom: 20px;
 }
-.date-md {
+.date-ymd {
+    display: flex;
     font-size: 180px;
-}
-.date-m {
-    float: left;
-}
-.date-d {
-    float: left;
-}
-.date-year {
-    font-size: 40px; 
-    margin-top: 138px;
-    float: left;
 }
 
 
@@ -41,23 +31,17 @@ span {
     line-height: 1;
 }
 .time-hm {
-    font-size: 500px;
+    font-size: 480px;
     font-weight: 500; 
-}
-.time-h {
-    float: left;
-}
-.time-m {
-    float: left;
+    display: flex;
 }
 .time-s {
-    width: 120px;
+    width: 100px;
     font-size: 100px; 
     margin-top: 345px;
 }
 .blink-box {
     display: inline-block;
-    float: left;
     width: 125px;
     height: 1px;
     padding: 0 10px;
@@ -65,4 +49,11 @@ span {
 .blink {
     margin-top: -40px;
     display: block;
+}
+
+.setting-box {
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    width: 120px;
 }
