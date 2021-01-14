@@ -19,8 +19,8 @@ console.log('argv:', argv);
 shell.exec('git add .')
 shell.exec(`git commit -m "测试shell"`)
 shell.exec('git checkout master')
-shell.exec('git pull')
+shell.exec('git pull origin master')
 shell.exec(`git checkout -b master_feature_${new Date().getTime()}`)
 shell.exec('git checkout myblog')
-shell.exec('git pull')
+shell.exec('git pull origin myblog')
 
