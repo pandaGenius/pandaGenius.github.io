@@ -1,0 +1,63 @@
+span {
+    display: inline-block;
+}
+.date-time {
+    position: fixed;
+    left: 20px;
+    top: 20px;
+}
+.main {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #000;
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.main .box .date {
+   display: flex; 
+   justify-content: center;
+   line-height: 1;
+   margin-bottom: 20px;
+}
+.date-ymd {
+    display: flex;
+    font-size: 180px;
+}
+
+
+.main .box .time {
+    display: flex;
+    line-height: 1;
+}
+.time-hms {
+    font-size: 260px;
+    font-weight: 500; 
+    display: flex;
+}
+.time-desc {
+    font-size: 60px; 
+    margin-top: 145px;
+}
+.blink-box {
+    display: inline-block;
+    width: 125px;
+    height: 1px;
+    padding: 0 10px;
+}
+.blink {
+    margin-top: -40px;
+    display: block;
+}
+
+.setting-box {
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    width: 120px;
+}
